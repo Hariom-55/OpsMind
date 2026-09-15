@@ -1,0 +1,176 @@
+# ============================================================
+# OpsMind - Root Git Ignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Environment & Secrets
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.p12
+*.jks
+secrets/
+credentials/
+config/secrets/
+
+# ------------------------------------------------------------
+# Operating System
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------
+# IDEs / Editors
+# ------------------------------------------------------------
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# ------------------------------------------------------------
+# Java / Maven / Spring Boot
+# ------------------------------------------------------------
+backend/**/target/
+backend/**/build/
+backend/**/.mvn/timing.properties
+
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven wrapper JAR is intentionally ignored only if generated
+# Remove this rule if you decide to commit the Maven wrapper JAR.
+backend/**/.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot generated logs
+backend/**/*.log
+
+# ------------------------------------------------------------
+# Python
+# ------------------------------------------------------------
+ai-service/**/__pycache__/
+ai-service/**/*.py[cod]
+ai-service/**/.pytest_cache/
+ai-service/**/.mypy_cache/
+ai-service/**/.ruff_cache/
+ai-service/**/.coverage
+ai-service/**/htmlcov/
+ai-service/**/.tox/
+ai-service/**/.nox/
+
+# Virtual environments
+ai-service/**/.venv/
+ai-service/**/venv/
+ai-service/**/env/
+ai-service/**/ENV/
+
+# Python packaging
+ai-service/**/build/
+ai-service/**/dist/
+ai-service/**/*.egg-info/
+
+# Jupyter
+ai-service/**/*.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+# Node / Frontend
+# ------------------------------------------------------------
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/dist/
+frontend/build/
+frontend/.cache/
+frontend/.turbo/
+frontend/.parcel-cache/
+
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+*.log
+logs/
+
+# ------------------------------------------------------------
+# Temporary files
+# ------------------------------------------------------------
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# ------------------------------------------------------------
+# Local databases / database artifacts
+# ------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL local dump files
+*.dump
+*.backup
+
+# ------------------------------------------------------------
+# Data
+# ------------------------------------------------------------
+# Ignore generated / potentially large datasets.
+# Keep directory structure using .gitkeep files.
+data/raw/*
+data/processed/*
+
+# Allow sample datasets
+!data/sample/
+!data/sample/**
+
+# ------------------------------------------------------------
+# ML Artifacts
+# ------------------------------------------------------------
+*.pkl
+*.pickle
+*.joblib
+*.onnx
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.safetensors
+
+ai-service/models/
+ai-service/artifacts/
+
+# ------------------------------------------------------------
+# Docker
+# ------------------------------------------------------------
+docker-compose.override.yml
+
+# Docker volumes
+infrastructure/docker/volumes/
+
+# ------------------------------------------------------------
+# Coverage / Test Reports
+# ------------------------------------------------------------
+coverage/
+htmlcov/
+.pytest_cache/
+
+backend/**/surefire-reports/
+backend/**/failsafe-reports/
+
+# ------------------------------------------------------------
+# OS / Tool generated files
+# ------------------------------------------------------------
+*.pid
+*.pid.lock
